@@ -32,11 +32,11 @@ function Contact() {
   return (
     <section
       id="contact"
-      className="w-full min-h-screen py-16 bg-gray-800 flex flex-col items-center px-4 md:px-20"
+      className="w-full min-h-screen py-16 bg-transparent flex flex-col items-center px-4 md:px-20"
     >
       {/* Section Heading */}
       <Motion.h2
-        className="text-4xl md:text-5xl font-bold text-white mb-4"
+        className="text-3xl md:text-4xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-violet-600"
         initial={{ opacity: 0, y: -50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
@@ -47,7 +47,7 @@ function Contact() {
 
       {/* Intro Message */}
       <Motion.p
-        className="text-md md:text-lg text-gray-200 text-center max-w-2xl mb-10"
+        className="text-md md:text-lg text-gray-600 text-center max-w-2xl mb-10"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ delay: 0.2, duration: 0.6 }}
@@ -59,18 +59,18 @@ function Contact() {
 
       {/* Contact Details */}
       <Motion.div
-        className="text-white text-center mb-8 space-y-2"
+        className="text-gray-800 text-center mb-8 space-y-2"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ delay: 0.4, duration: 0.6 }}
         viewport={{ once: true }}
       >
         <p className="text-lg flex items-center justify-center gap-2">
-          <FaPhone className="text-yellow-400" /> 
+          <FaPhone className="text-indigo-600" /> 
           <span className="font-semibold">+91 6005460432</span>
         </p>
         <p className="text-lg flex items-center justify-center gap-2">
-          <FaEnvelope className="text-yellow-400" /> 
+          <FaEnvelope className="text-indigo-600" /> 
           <span className="font-semibold">toufeeqmir@example.com</span>
         </p>
       </Motion.div>
@@ -78,7 +78,7 @@ function Contact() {
       {/* Animated Form */}
       <Motion.form
         onSubmit={handleSubmit}
-        className="w-full max-w-md bg-gray-900/40 border border-white/10 rounded-xl shadow-sm p-6 md:p-8 flex flex-col gap-4"
+        className="w-full max-w-md bg-white/80 border border-gray-200 rounded-2xl shadow-sm p-6 md:p-8 flex flex-col gap-4"
         initial={{ opacity: 0, y: 100 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.6, duration: 0.8, ease: "easeOut" }}
@@ -91,7 +91,7 @@ function Contact() {
           onChange={handleChange}
           placeholder="Your Name"
           required
-          className="p-3 md:p-4 rounded-lg border border-yellow-300/70 bg-black/20 focus:outline-none focus:ring-2 focus:ring-pink-500 transition duration-300 text-white placeholder:text-gray-400"
+          className="p-3 md:p-4 rounded-xl border border-gray-200 bg-white focus:outline-none focus:ring-2 focus:ring-indigo-300 transition duration-200 text-gray-900 placeholder:text-gray-400"
         />
         <input
           type="email"
@@ -100,7 +100,7 @@ function Contact() {
           onChange={handleChange}
           placeholder="Your Email"
           required
-          className="p-3 md:p-4 rounded-lg border border-yellow-300/70 bg-black/20 focus:outline-none focus:ring-2 focus:ring-pink-500 transition duration-300 text-white placeholder:text-gray-400"
+          className="p-3 md:p-4 rounded-xl border border-gray-200 bg-white focus:outline-none focus:ring-2 focus:ring-indigo-300 transition duration-200 text-gray-900 placeholder:text-gray-400"
         />
         <textarea
           name="message"
@@ -109,11 +109,11 @@ function Contact() {
           placeholder="Your Message"
           rows={4}
           required
-          className="p-3 md:p-4 rounded-lg border border-yellow-300/70 bg-black/20 focus:outline-none focus:ring-2 focus:ring-pink-500 transition duration-300 resize-none text-white placeholder:text-gray-400"
+          className="p-3 md:p-4 rounded-xl border border-gray-200 bg-white focus:outline-none focus:ring-2 focus:ring-indigo-300 transition duration-200 resize-none text-gray-900 placeholder:text-gray-400"
         ></textarea>
         <button
           type="submit"
-          className="px-4 py-3 md:px-6 md:py-4 bg-pink-500 text-black font-semibold rounded-lg hover:bg-pink-600 transition duration-300"
+          className="px-4 py-3 md:px-6 md:py-4 bg-indigo-600 text-white font-semibold rounded-xl hover:bg-indigo-700 transition duration-200"
         >
           Send Message
         </button>
