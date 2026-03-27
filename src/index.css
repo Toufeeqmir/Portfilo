@@ -27,6 +27,19 @@ body {
   min-width: 320px;
   min-height: 100vh;
   display: block;
+
+  /* Dark "dashboard" theme background (subtle diagonal pattern). */
+  background-color: #070b14;
+  background-image:
+    radial-gradient(800px 500px at 20% 10%, rgba(99, 102, 241, 0.25), transparent 60%),
+    radial-gradient(700px 500px at 80% 20%, rgba(168, 85, 247, 0.18), transparent 55%),
+    repeating-linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.08) 0px,
+      rgba(255, 255, 255, 0.08) 1px,
+      transparent 1px,
+      transparent 14px
+    );
 }
 
 html {

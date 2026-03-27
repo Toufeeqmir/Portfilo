@@ -11,7 +11,7 @@ import Footer from './components/footer';
 import Resume from "./components/Resume";
 function App() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-indigo-50 via-white to-violet-50 text-gray-900">
+    <div className="min-h-screen text-slate-100">
       <Navbar />
        <Hero />
        <About/>

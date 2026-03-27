@@ -36,7 +36,7 @@ function Contact() {
     >
       {/* Section Heading */}
       <Motion.h2
-        className="text-3xl md:text-4xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-violet-600"
+        className="text-3xl md:text-4xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-indigo-200 to-violet-200"
         initial={{ opacity: 0, y: -50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
@@ -47,7 +47,7 @@ function Contact() {
 
       {/* Intro Message */}
       <Motion.p
-        className="text-md md:text-lg text-gray-600 text-center max-w-2xl mb-10"
+        className="text-md md:text-lg text-slate-200 text-center max-w-2xl mb-10"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ delay: 0.2, duration: 0.6 }}
@@ -59,7 +59,7 @@ function Contact() {
 
       {/* Contact Details */}
       <Motion.div
-        className="text-gray-800 text-center mb-8 space-y-2"
+        className="text-white/90 text-center mb-8 space-y-2"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ delay: 0.4, duration: 0.6 }}
@@ -78,7 +78,7 @@ function Contact() {
       {/* Animated Form */}
       <Motion.form
         onSubmit={handleSubmit}
-        className="w-full max-w-md bg-white/80 border border-gray-200 rounded-2xl shadow-sm p-6 md:p-8 flex flex-col gap-4"
+        className="w-full max-w-md bg-white/5 border border-white/10 rounded-2xl p-6 md:p-8 flex flex-col gap-4"
         initial={{ opacity: 0, y: 100 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.6, duration: 0.8, ease: "easeOut" }}
@@ -91,7 +91,7 @@ function Contact() {
           onChange={handleChange}
           placeholder="Your Name"
           required
-          className="p-3 md:p-4 rounded-xl border border-gray-200 bg-white focus:outline-none focus:ring-2 focus:ring-indigo-300 transition duration-200 text-gray-900 placeholder:text-gray-400"
+          className="p-3 md:p-4 rounded-xl border border-white/10 bg-white/5 focus:outline-none focus:ring-2 focus:ring-indigo-300/40 transition duration-200 text-white placeholder:text-white/50"
         />
         <input
           type="email"
@@ -100,7 +100,7 @@ function Contact() {
           onChange={handleChange}
           placeholder="Your Email"
           required
-          className="p-3 md:p-4 rounded-xl border border-gray-200 bg-white focus:outline-none focus:ring-2 focus:ring-indigo-300 transition duration-200 text-gray-900 placeholder:text-gray-400"
+          className="p-3 md:p-4 rounded-xl border border-white/10 bg-white/5 focus:outline-none focus:ring-2 focus:ring-indigo-300/40 transition duration-200 text-white placeholder:text-white/50"
         />
         <textarea
           name="message"
@@ -109,11 +109,11 @@ function Contact() {
           placeholder="Your Message"
           rows={4}
           required
-          className="p-3 md:p-4 rounded-xl border border-gray-200 bg-white focus:outline-none focus:ring-2 focus:ring-indigo-300 transition duration-200 resize-none text-gray-900 placeholder:text-gray-400"
+          className="p-3 md:p-4 rounded-xl border border-white/10 bg-white/5 focus:outline-none focus:ring-2 focus:ring-indigo-300/40 transition duration-200 resize-none text-white placeholder:text-white/50"
         ></textarea>
         <button
           type="submit"
-          className="px-4 py-3 md:px-6 md:py-4 bg-indigo-600 text-white font-semibold rounded-xl hover:bg-indigo-700 transition duration-200"
+          className="px-4 py-3 md:px-6 md:py-4 bg-indigo-500 text-white font-semibold rounded-xl hover:bg-indigo-600 transition duration-200"
         >
           Send Message
         </button>

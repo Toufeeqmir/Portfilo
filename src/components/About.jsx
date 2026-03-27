@@ -4,14 +4,14 @@ function About() {
   return (
     <section
       id="about"
-      className="w-full py-20 bg-transparent text-gray-900 flex flex-col md:flex-row items-center justify-center px-6 md:px-20"
+      className="w-full py-20 bg-transparent text-slate-100 flex flex-col md:flex-row items-center justify-center px-6 md:px-20"
     >
       {/* Text Content */}
       <div className="md:w-1/2 text-center md:text-left mb-10 md:mb-0">
         <h2 className="text-3xl md:text-4xl font-bold mb-6">
           About Me
         </h2>
-        <div className="space-y-4 text-base md:text-lg text-gray-700 leading-relaxed">
+        <div className="space-y-4 text-base md:text-lg text-slate-200 leading-relaxed">
           <p>
             I am a passionate and dedicated Computer Science engineering student with a strong interest in software
             development, problem-solving, and building impactful digital solutions. I have a solid foundation in data
@@ -33,19 +33,19 @@ function About() {
 
         {/* Skills Highlights */}
         <div className="flex flex-wrap gap-3 justify-center md:justify-start mt-8">
-          <span className="px-4 py-2 bg-indigo-600/10 text-indigo-700 rounded-full ring-1 ring-indigo-200">
+          <span className="px-4 py-2 bg-white/5 text-indigo-200 rounded-full ring-1 ring-white/10">
             React
           </span>
-          <span className="px-4 py-2 bg-violet-600/10 text-violet-700 rounded-full ring-1 ring-violet-200">
+          <span className="px-4 py-2 bg-white/5 text-violet-200 rounded-full ring-1 ring-white/10">
             Node.js
           </span>
-          <span className="px-4 py-2 bg-indigo-600/10 text-indigo-700 rounded-full ring-1 ring-indigo-200">
+          <span className="px-4 py-2 bg-white/5 text-indigo-200 rounded-full ring-1 ring-white/10">
             Tailwind CSS
           </span>
-          <span className="px-4 py-2 bg-violet-600/10 text-violet-700 rounded-full ring-1 ring-violet-200">
+          <span className="px-4 py-2 bg-white/5 text-violet-200 rounded-full ring-1 ring-white/10">
             JavaScript
           </span>
-          <span className="px-4 py-2 bg-indigo-600/10 text-indigo-700 rounded-full ring-1 ring-indigo-200">
+          <span className="px-4 py-2 bg-white/5 text-indigo-200 rounded-full ring-1 ring-white/10">
             HTML & CSS
           </span>
         </div>

@@ -41,7 +41,7 @@ function Projects() {
           initial={{ opacity: 0, y: -30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-3xl md:text-4xl font-bold mb-10 bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-violet-600"
+          className="text-3xl md:text-4xl font-bold mb-10 bg-clip-text text-transparent bg-gradient-to-r from-indigo-200 to-violet-200"
         >
           My Projects
         </Motion.h2>
@@ -55,18 +55,18 @@ function Projects() {
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6, delay: index * 0.2 }}
               whileHover={{ scale: 1.02 }}
-              className="bg-white/80 border border-gray-200 rounded-2xl p-8 flex flex-col items-center text-center hover:bg-white transition shadow-sm"
+              className="bg-white/5 border border-white/10 rounded-2xl p-8 flex flex-col items-center text-center hover:bg-white/10 transition"
             >
               {/* Icon */}
               <div className="mb-6">{project.icon}</div>
 
               {/* Title */}
-              <h3 className="text-2xl font-bold mb-3 text-gray-900">
+              <h3 className="text-2xl font-bold mb-3 text-white">
                 {project.title}
               </h3>
 
               {/* Description */}
-              <p className="text-gray-600">{project.description}</p>
+              <p className="text-slate-200">{project.description}</p>
             </Motion.div>
           ))}
         </div>

@@ -13,15 +13,15 @@ function Navbar() {
   ];
 
   return (
-    <nav className="fixed w-full top-0 left-0 z-50 backdrop-blur-md bg-white/70 shadow-sm border-b border-gray-200">
+    <nav className="fixed w-full top-0 left-0 z-50 backdrop-blur-md bg-slate-950/55 shadow-sm border-b border-white/10">
       <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
         <div className="flex items-center space-x-4">
-          <div className="w-11 h-11 flex items-center justify-center bg-white rounded-full ring-1 ring-gray-200 transition">
-            <span className="text-sm md:text-base font-bold tracking-widest bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-violet-600">
+          <div className="w-11 h-11 flex items-center justify-center bg-white/10 rounded-full ring-1 ring-white/15 transition">
+            <span className="text-sm md:text-base font-bold tracking-widest bg-clip-text text-transparent bg-gradient-to-r from-indigo-300 to-violet-300">
               TM
             </span>
           </div>
-          <h1 className="text-2xl md:text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-violet-600">
+          <h1 className="text-2xl md:text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-indigo-200 to-violet-200">
             My Portfolio
           </h1>
         </div>
@@ -31,7 +31,7 @@ function Navbar() {
             <li key={link.href}>
               <a
                 href={link.href}
-                className="text-gray-800 font-semibold text-lg hover:text-indigo-700 transition-colors duration-200"
+                className="text-white/90 font-semibold text-lg hover:text-indigo-200 transition-colors duration-200"
               >
                 {link.label}
               </a>
@@ -41,7 +41,7 @@ function Navbar() {
 
         <button
           type="button"
-          className="md:hidden inline-flex items-center justify-center w-11 h-11 rounded-lg bg-gray-100 hover:bg-gray-200 text-gray-900 transition"
+          className="md:hidden inline-flex items-center justify-center w-11 h-11 rounded-lg bg-white/10 hover:bg-white/15 text-white transition"
           aria-label={open ? "Close menu" : "Open menu"}
           aria-expanded={open}
           onClick={() => setOpen((v) => !v)}
@@ -51,14 +51,14 @@ function Navbar() {
       </div>
 
       {open && (
-        <div className="md:hidden bg-white/95 border-t border-gray-200">
+        <div className="md:hidden bg-slate-950/85 border-t border-white/10">
           <ul className="px-6 pb-4 pt-3 space-y-3">
             {navLinks.map((link) => (
               <li key={link.href}>
                 <a
                   href={link.href}
                   onClick={() => setOpen(false)}
-                  className="block text-gray-800 font-semibold text-lg hover:text-indigo-700 transition-colors"
+                  className="block text-white/90 font-semibold text-lg hover:text-indigo-200 transition-colors"
                 >
                   {link.label}
                 </a>
