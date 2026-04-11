@@ -12,7 +12,7 @@ function Resume() {
       try {
         // Range request lets us read only the first bytes.
         // A valid PDF always starts with: %PDF
-        const res = await fetch("/resume.pdf", {
+        const res = await fetch("/Resume-1.pdf", {
           method: "GET",
           cache: "no-store",
           headers: {
@@ -48,7 +48,7 @@ function Resume() {
   const handleView = async () => {
     setIsChecking(true);
     try {
-      const res = await fetch("/resume.pdf", {
+      const res = await fetch("/Resume-1.pdf", {
         method: "GET",
         cache: "no-store",
         headers: {
@@ -107,7 +107,7 @@ function Resume() {
             </button>
 
             <a
-              href="/resume.pdf"
+              href="/Resume-1.pdf"
               download
               className="inline-flex items-center justify-center px-5 py-2.5 rounded-xl border border-white/10 bg-white/5 hover:bg-white/10 font-semibold transition"
             >
@@ -130,9 +130,9 @@ function Resume() {
 
           {isAvailable === false && (
             <div>
-              <p className="text-indigo-700 font-semibold mb-2">resume.pdf not found</p>
+              <p className="text-indigo-700 font-semibold mb-2">Resume-1.pdf not found</p>
               <p className="text-slate-200">
-                Put your resume PDF at <span className="font-semibold">`my-app/public/resume.pdf`</span>{" "}
+                Put your resume PDF at <span className="font-semibold">`my-app/public/Resume-1.pdf`</span>{" "}
                 and refresh the page.
               </p>
             </div>
@@ -160,7 +160,7 @@ function Resume() {
               </div>
               <iframe
                 title="Resume PDF"
-                src="/resume.pdf"
+                src="/Resume-1.pdf"
                 className="w-full"
                 style={{ height: "70vh" }}
               />
