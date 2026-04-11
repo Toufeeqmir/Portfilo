@@ -1,6 +1,7 @@
 import React from "react";
 import { motion as Motion } from "framer-motion";
-import { FaCloudSun, FaSpotify, FaGamepad, FaHotel } from "react-icons/fa";
+import { FaCloudSun, FaSpotify, FaGamepad, FaHotel ,FaUsers, FaRobot } from "react-icons/fa";
+// import { FaUsers, FaCode, FaComments } from "react-icons/fa";
 
 function Projects() {
   const projects = [
@@ -22,12 +23,25 @@ function Projects() {
         "A fun arcade-style game built using Java with smooth controls and exciting gameplay.",
       icon: <FaGamepad className="text-5xl text-green-400" />,
     },
-    {
-      title: "Spotify Clone",
+     {
+      title: "Dev-Circle",
       description:
-        "A Spotify-inspired music streaming clone with playlists, albums, and a clean UI.",
-      icon: <FaSpotify className="text-5xl text-green-500" />,
+        "A community platform for developers to share knowledge, collaborate on projects, and connect with like-minded individuals. ",
+     icon: <FaUsers className="text-5xl text-green-400" />
     },
+
+     {
+      title: "Real Time AI Powered Trainer for Speech and Body Language",
+      description:
+        "A real-time AI-powered trainer for improving speech and body language skills.",
+    icon: <FaRobot className="text-5xl text-green-400" />
+    },
+    // {
+    //   title: "Spotify Clone",
+    //   description:
+    //     "A Spotify-inspired music streaming clone with playlists, albums, and a clean UI.",
+    //   icon: <FaSpotify className="text-5xl text-green-500" />,
+    // },
   ];
 
   return (
