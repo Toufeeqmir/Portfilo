@@ -1,6 +1,13 @@
 import React from "react";
 import { motion as Motion } from "framer-motion";
-import { FaCloudSun, FaSpotify, FaGamepad, FaHotel ,FaUsers, FaRobot } from "react-icons/fa";
+import {
+  FaCloudSun,
+  FaGamepad,
+  FaHotel,
+  FaUsers,
+  FaRobot,
+  FaGithub,
+} from "react-icons/fa";
 // import { FaUsers, FaCode, FaComments } from "react-icons/fa";
 
 function Projects() {
@@ -10,31 +17,35 @@ function Projects() {
       description:
         "A responsive weather app built with real-time API integration to fetch and display accurate weather updates.",
       icon: <FaCloudSun className="text-5xl text-blue-400" />,
+      githubUrl: "https://github.com/toufeeqmir/weather-app",
     },
     {
       title: "Airbnb Clone",
       description:
         "A feature-rich Airbnb clone with login, registration, property listings, and booking functionality.",
       icon: <FaHotel className="text-5xl text-pink-500" />,
+      githubUrl: "https://github.com/toufeeqmir/airbnb-clone",
     },
     {
       title: "Brick Breaker Game (Java)",
       description:
         "A fun arcade-style game built using Java with smooth controls and exciting gameplay.",
       icon: <FaGamepad className="text-5xl text-green-400" />,
+      githubUrl: "https://github.com/toufeeqmir/brick-breaker-game",
     },
-     {
+    {
       title: "Dev-Circle",
       description:
         "A community platform for developers to share knowledge, collaborate on projects, and connect with like-minded individuals. ",
-     icon: <FaUsers className="text-5xl text-green-400" />
+      icon: <FaUsers className="text-5xl text-green-400" />,
+      githubUrl: "https://github.com/toufeeqmir/dev-circle",
     },
-
-     {
+    {
       title: "Real Time AI Powered Trainer for Speech and Body Language",
       description:
         "A real-time AI-powered trainer for improving speech and body language skills.",
-    icon: <FaRobot className="text-5xl text-green-400" />
+      icon: <FaRobot className="text-5xl text-green-400" />,
+      githubUrl: "https://github.com/toufeeqmir/ai-speech-body-language-trainer",
     },
     // {
     //   title: "Spotify Clone",
@@ -80,7 +91,19 @@ function Projects() {
               </h3>
 
               {/* Description */}
-              <p className="text-slate-200">{project.description}</p>
+              <p className="text-slate-200 flex-grow">{project.description}</p>
+
+              {project.githubUrl && (
+                <a
+                  href={project.githubUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-6 inline-flex items-center gap-2 rounded-xl border border-white/15 bg-white/5 px-4 py-2.5 text-sm font-semibold text-indigo-200 hover:bg-white/10 hover:text-white transition"
+                >
+                  <FaGithub className="text-lg" aria-hidden />
+                  View on GitHub
+                </a>
+              )}
             </Motion.div>
           ))}
         </div>
