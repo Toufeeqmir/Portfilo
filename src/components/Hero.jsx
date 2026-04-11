@@ -1,5 +1,4 @@
 import React from "react";
-import photo from "../images/photo.jpeg";
 import { FaGithub, FaInstagram, FaLinkedin, FaYoutube } from "react-icons/fa";
 
 function Hero() {
@@ -19,8 +18,8 @@ function Hero() {
         <div className="rounded-3xl bg-gray-50 border border-gray-200 p-3">
           <div className="overflow-hidden rounded-2xl">
             <img
-              src={photo}
-              alt="Toufeeq Mir"
+              src="/photo.jpeg"
+              alt="profile"
               className="w-full aspect-[4/5] object-cover"
             />
           </div>
