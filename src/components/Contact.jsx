@@ -113,7 +113,7 @@ function Contact() {
         ></textarea>
         <button
           type="submit"
-          className="px-4 py-3 md:px-6 md:py-4 bg-indigo-500 text-white font-semibold rounded-xl hover:bg-indigo-600 transition duration-200"
+          className="inline-flex items-center justify-center px-4 py-3 md:px-6 md:py-4 rounded-xl bg-indigo-500 text-white font-semibold shadow-lg shadow-indigo-500/30 hover:bg-indigo-600 transition duration-200"
         >
           Send Message
         </button>
