@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 
+const RESUME_PATH = "/Resume-Toufeeqmir.pdf";
+
 function Resume() {
   const [isAvailable, setIsAvailable] = useState(null);
   const [showViewer, setShowViewer] = useState(false);
@@ -10,9 +12,7 @@ function Resume() {
 
     const validatePdf = async () => {
       try {
-        // Range request lets us read only the first bytes.
-        // A valid PDF always starts with: %PDF
-        const res = await fetch("/Resume-1.pdf", {
+        const res = await fetch(RESUME_PATH, {
           method: "GET",
           cache: "no-store",
           headers: {
@@ -25,12 +25,13 @@ function Resume() {
 
         const buf = await res.arrayBuffer();
         const bytes = new Uint8Array(buf);
+
         return (
           bytes.length >= 4 &&
-          bytes[0] === 0x25 && // %
-          bytes[1] === 0x50 && // P
-          bytes[2] === 0x44 && // D
-          bytes[3] === 0x46 // F
+          bytes[0] === 0x25 &&
+          bytes[1] === 0x50 &&
+          bytes[2] === 0x44 &&
+          bytes[3] === 0x46
         );
       } catch {
         return false;
@@ -40,6 +41,7 @@ function Resume() {
     validatePdf().then((ok) => {
       if (!cancelled) setIsAvailable(ok);
     });
+
     return () => {
       cancelled = true;
     };
@@ -47,8 +49,9 @@ function Resume() {
 
   const handleView = async () => {
     setIsChecking(true);
+
     try {
-      const res = await fetch("/Resume-1.pdf", {
+      const res = await fetch(RESUME_PATH, {
         method: "GET",
         cache: "no-store",
         headers: {
@@ -65,12 +68,13 @@ function Resume() {
 
       const buf = await res.arrayBuffer();
       const bytes = new Uint8Array(buf);
+
       const ok =
         bytes.length >= 4 &&
-        bytes[0] === 0x25 && // %
-        bytes[1] === 0x50 && // P
-        bytes[2] === 0x44 && // D
-        bytes[3] === 0x46; // F
+        bytes[0] === 0x25 &&
+        bytes[1] === 0x50 &&
+        bytes[2] === 0x44 &&
+        bytes[3] === 0x46;
 
       setIsAvailable(ok);
       setShowViewer(ok);
@@ -90,7 +94,9 @@ function Resume() {
       <div className="max-w-5xl mx-auto">
         <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-8 mb-8">
           <div>
-            <h2 className="text-3xl md:text-4xl font-bold tracking-tight">Resume</h2>
+            <h2 className="text-3xl md:text-4xl font-bold tracking-tight">
+              Resume
+            </h2>
             <p className="text-slate-200 mt-2 max-w-2xl">
               View it here or download the PDF.
             </p>
@@ -107,7 +113,7 @@ function Resume() {
             </button>
 
             <a
-              href="/Resume-1.pdf"
+              href={RESUME_PATH}
               download
               className="inline-flex items-center justify-center px-5 py-2.5 rounded-xl border border-white/10 bg-white/5 hover:bg-white/10 font-semibold transition"
             >
@@ -130,10 +136,15 @@ function Resume() {
 
           {isAvailable === false && (
             <div>
-              <p className="text-indigo-700 font-semibold mb-2">Resume-1.pdf not found</p>
+              <p className="text-indigo-700 font-semibold mb-2">
+                Resume not found
+              </p>
               <p className="text-slate-200">
-                Put your resume PDF at <span className="font-semibold">`my-app/public/Resume-1.pdf`</span>{" "}
-                and refresh the page.
+                Make sure your PDF is placed inside{" "}
+                <span className="font-semibold">public/</span> folder with name{" "}
+                <span className="font-semibold">
+                  Resume-Toufeeqmir.pdf
+                </span>
               </p>
             </div>
           )}
@@ -149,7 +160,9 @@ function Resume() {
           {isAvailable === true && showViewer && (
             <div className="overflow-hidden rounded-2xl border border-white/10 bg-black/20">
               <div className="flex items-center justify-between px-4 py-3 border-b border-white/10">
-                <p className="text-sm text-white/90 font-semibold">Resume Preview</p>
+                <p className="text-sm text-white/90 font-semibold">
+                  Resume Preview
+                </p>
                 <button
                   type="button"
                   onClick={() => setShowViewer(false)}
@@ -158,9 +171,10 @@ function Resume() {
                   Hide
                 </button>
               </div>
+
               <iframe
                 title="Resume PDF"
-                src="/Resume-1.pdf"
+                src={RESUME_PATH}
                 className="w-full"
                 style={{ height: "70vh" }}
               />
@@ -173,4 +187,3 @@ function Resume() {
 }
 
 export default Resume;
-
