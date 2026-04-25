@@ -1,14 +1,14 @@
 import React from "react";
 import { motion as Motion } from "framer-motion";
+import { RiRobot2Fill } from "react-icons/ri";
 import {
   FaCloudSun,
-  FaGamepad,
   FaHotel,
   FaUsers,
   FaRobot,
   FaGithub,
+  FaExternalLinkAlt,
 } from "react-icons/fa";
-// import { FaUsers, FaCode, FaComments } from "react-icons/fa";
 
 function Projects() {
   const projects = [
@@ -27,16 +27,17 @@ function Projects() {
       githubUrl: "https://github.com/toufeeqmir/airbnb-clone",
     },
     {
-      title: "Brick Breaker Game (Java)",
+      title: "Smart-ai-note-app",
       description:
-        "A fun arcade-style game built using Java with smooth controls and exciting gameplay.",
-      icon: <FaGamepad className="text-5xl text-green-400" />,
-      githubUrl: "https://github.com/toufeeqmir/brick-breaker-game",
+        "An AI-powered note-taking web app built with React and Tailwind CSS featuring smart summarization, auto-tagging, and note cleanup powered by OpenRouter.",
+      icon: <RiRobot2Fill className="text-5xl text-violet-500" />,
+      liveLink: "https://toufeeq-ai-note-app.vercel.app",
+      githubUrl: "https://github.com/toufeeqmir/ai-note-app",
     },
     {
       title: "Dev-Circle",
       description:
-        "A community platform for developers to share knowledge, collaborate on projects, and connect with like-minded individuals. ",
+        "A community platform for developers to share knowledge, collaborate on projects, and connect with like-minded individuals.",
       icon: <FaUsers className="text-5xl text-green-400" />,
       githubUrl: "https://github.com/toufeeqmir/dev-circle",
     },
@@ -45,14 +46,9 @@ function Projects() {
       description:
         "A real-time AI-powered trainer for improving speech and body language skills.",
       icon: <FaRobot className="text-5xl text-green-400" />,
-      githubUrl: "https://github.com/toufeeqmir/ai-speech-body-language-trainer",
+      githubUrl:
+        "https://github.com/toufeeqmir/ai-speech-body-language-trainer",
     },
-    // {
-    //   title: "Spotify Clone",
-    //   description:
-    //     "A Spotify-inspired music streaming clone with playlists, albums, and a clean UI.",
-    //   icon: <FaSpotify className="text-5xl text-green-500" />,
-    // },
   ];
 
   return (
@@ -61,7 +57,6 @@ function Projects() {
       className="min-h-screen bg-transparent py-16 px-6"
     >
       <div className="max-w-7xl mx-auto text-center">
-        {/* Heading */}
         <Motion.h2
           initial={{ opacity: 0, y: -30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -71,7 +66,6 @@ function Projects() {
           My Projects
         </Motion.h2>
 
-        {/* Projects Grid */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-10">
           {projects.map((project, index) => (
             <Motion.div
@@ -82,28 +76,41 @@ function Projects() {
               whileHover={{ scale: 1.02 }}
               className="bg-white/5 border border-white/10 rounded-2xl p-8 flex flex-col items-center text-center hover:bg-white/10 transition"
             >
-              {/* Icon */}
               <div className="mb-6">{project.icon}</div>
 
-              {/* Title */}
               <h3 className="text-2xl font-bold mb-3 text-white">
                 {project.title}
               </h3>
 
-              {/* Description */}
-              <p className="text-slate-200 flex-grow">{project.description}</p>
+              <p className="text-slate-200 flex-grow">
+                {project.description}
+              </p>
 
-              {project.githubUrl && (
-                <a
-                  href={project.githubUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mt-6 inline-flex items-center gap-2 rounded-xl border border-white/15 bg-white/5 px-4 py-2.5 text-sm font-semibold text-indigo-200 hover:bg-white/10 hover:text-white transition"
-                >
-                  <FaGithub className="text-lg" aria-hidden />
-                  View on GitHub
-                </a>
-              )}
+              <div className="flex flex-wrap justify-center gap-3 mt-6">
+                {project.githubUrl && (
+                  <a
+                    href={project.githubUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 rounded-xl border border-white/15 bg-white/5 px-4 py-2.5 text-sm font-semibold text-indigo-200 hover:bg-white/10 hover:text-white transition"
+                  >
+                    <FaGithub className="text-lg" />
+                    View on GitHub
+                  </a>
+                )}
+
+                {project.liveLink && (
+                  <a
+                    href={project.liveLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 rounded-xl border border-violet-400/30 bg-violet-500/10 px-4 py-2.5 text-sm font-semibold text-violet-300 hover:bg-violet-500/20 hover:text-white transition"
+                  >
+                    <FaExternalLinkAlt className="text-sm" />
+                    Live Demo
+                  </a>
+                )}
+              </div>
             </Motion.div>
           ))}
         </div>
