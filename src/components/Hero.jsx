@@ -60,7 +60,7 @@ function Hero() {
                 </a>
                 <a
                   href="#contact"
-                  className="inline-flex items-center justify-center px-5 py-3 rounded-xl border border-indigo-200 bg-indigo-50 text-indigo-700 font-semibold shadow-lg shadow-indigo-200/40 hover:bg-indigo-100 transition"
+                  className="inline-flex items-center justify-center px-5 py-3 rounded-xl border border-slate-300 bg-slate-900 text-white-700 font-semibold shadow-lg shadow-indigo-200/40 hover:bg-indigo-100 transition"
                 >
                   Contact
                 </a>
@@ -104,7 +104,7 @@ function Hero() {
                 >
                   <FaLinkedin />
                 </a>
-                <a
+                {/* <a
                   href="#"
                   className="hover:text-violet-300 transition-colors"
                   aria-label="Instagram"
@@ -117,7 +117,7 @@ function Hero() {
                   aria-label="YouTube"
                 >
                   <FaYoutube />
-                </a>
+                </a> */}
               </div>
             </div>
           </div>
