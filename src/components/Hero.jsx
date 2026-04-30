@@ -1,5 +1,5 @@
 import React from "react";
-import { FaGithub, FaInstagram, FaLinkedin, FaYoutube } from "react-icons/fa";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 function Hero() {
   return (
@@ -33,6 +33,12 @@ function Hero() {
                 skills through hands-on projects.
               </p>
 
+              <p className="mt-5 max-w-3xl rounded-2xl border border-indigo-200 bg-indigo-50 px-5 py-4 text-base sm:text-lg font-medium leading-8 text-indigo-900 shadow-sm">
+                I am open to contributing to real-world projects where I can apply
+                my knowledge, collaborate effectively, and continue growing as a
+                developer through practical experience.
+              </p>
+
               <div className="mt-8 flex flex-wrap gap-3 justify-center lg:justify-start">
                 <span className="rounded-full bg-slate-900 px-4 py-2 text-sm font-semibold text-white">
                   Java
@@ -60,7 +66,7 @@ function Hero() {
                 </a>
                 <a
                   href="#contact"
-                  className="inline-flex items-center justify-center px-5 py-3 rounded-xl border border-slate-300 bg-slate-900 text-white-700 font-semibold shadow-lg shadow-indigo-200/40 hover:bg-indigo-100 transition"
+                  className="inline-flex items-center justify-center px-5 py-3 rounded-xl border border-indigo-200 bg-indigo-50 text-indigo-700 font-semibold shadow-lg shadow-indigo-200/40 hover:bg-indigo-100 transition"
                 >
                   Contact
                 </a>
