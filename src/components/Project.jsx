@@ -1,6 +1,8 @@
 import React from "react";
 import { motion as Motion } from "framer-motion";
 import { RiRobot2Fill } from "react-icons/ri";
+import { FaReceipt } from "react-icons/fa6";
+
 import {
   FaCloudSun,
   FaHotel,
@@ -12,13 +14,22 @@ import {
 
 function Projects() {
   const projects = [
-    {
-      title: "Weather App",
-      description:
-        "A responsive weather app built with real-time API integration to fetch and display accurate weather updates.",
-      icon: <FaCloudSun className="text-5xl text-blue-400" />,
-      githubUrl: "https://github.com/toufeeqmir/weather-app",
-    },
+    // {
+    //   title: "Weather App",
+    //   description:
+    //     "A responsive weather app built with real-time API integration to fetch and display accurate weather updates.",
+    //   icon: <FaCloudSun className="text-5xl text-blue-400" />,
+    //   githubUrl: "https://github.com/toufeeqmir/weather-app",
+    // },
+
+     {
+       title: "Bill-Bond",
+       description:
+       "Bill-Bond is a web application designed to simplify shared billing and communication between users. It helps organize bill-related interactions, improve clarity, and create a smoother experience for managing connected financial activities.",
+       icon: <FaReceipt className="text-5xl text-blue-500" />,
+       githubUrl: "https://github.com/toufeeqmir/smart-split-ai",
+
+     },
     {
       title: "Airbnb Clone",
       description:
@@ -42,12 +53,12 @@ function Projects() {
       githubUrl: "https://github.com/toufeeqmir/dev-circle",
     },
     {
-      title: "Real Time AI Powered Trainer for Speech and Body Language",
+      title: "AI Prep. Hub",
       description:
-        "A real-time AI-powered trainer for improving speech and body language skills.",
+        "This project is a modern AI-powered interview preparation dashboard built with React and Tailwind CSS, redesigned as a premium AI Command Center while preserving all existing logic, API calls, and functionality. Users can experience an interactive and responsive dashboard with smart analytics, performance tracking, practice and mock interview actions, AI-style insight panels, readiness progress indicators, streak-based gamification, and activity timelines that make preparation feel more structured, engaging, and personalized.",
       icon: <FaRobot className="text-5xl text-green-400" />,
       githubUrl:
-        "https://github.com/toufeeqmir/ai-speech-body-language-trainer",
+        "https://github.com/toufeeqmir/VivaCoach-AI",
     },
   ];
 

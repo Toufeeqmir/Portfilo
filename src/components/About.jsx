@@ -19,6 +19,10 @@ function About() {
             functionality and user experience.
           </p>
           <p>
+            I am currently pursuing my Computer Science engineering degree at the Islamic University of Science and
+            Technology, Awantipora, and my average CGPA till now is 7.0222.
+          </p>
+          <p>
             I am particularly interested in emerging technologies such as artificial intelligence and web development,
             and I continuously strive to expand my knowledge by working on practical projects and exploring new tools.
             I am a quick learner, a collaborative team player, and someone who values clean, efficient, and scalable
