@@ -3,9 +3,10 @@ import React from 'react'
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import About from "./components/About";
-import Skills from './components/skills'
+
 
 import Projects from "./components/Project";
+import Skills from './components/skills'
 import Contact from "./components/Contact";
 import Footer from './components/footer';
 import Resume from "./components/Resume";
@@ -15,8 +16,9 @@ function App() {
       <Navbar />
        <Hero />
        <About/>
+        <Projects/>
        <Skills/>
-         <Projects/>
+        
       <Contact />
       <Resume />
       <Footer/>

@@ -18,7 +18,7 @@ function Navbar() {
         <div className="flex items-center space-x-4">
           <div className="w-11 h-11 flex items-center justify-center bg-white/10 rounded-full ring-1 ring-white/15 transition">
             <span className="text-sm md:text-base font-bold tracking-widest bg-clip-text text-transparent bg-gradient-to-r from-indigo-300 to-violet-300">
-              TM
+              S/W
             </span>
           </div>
           <h1 className="text-2xl md:text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-indigo-200 to-violet-200">
