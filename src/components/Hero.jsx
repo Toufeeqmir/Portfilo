@@ -22,21 +22,15 @@ function Hero() {
                 Toufeeq Ahmad Mir
               </h1>
 
-              <p className="mt-5 max-w-3xl text-lg sm:text-xl leading-8 text-slate-600">
-                Computer Science engineering student building clean web experiences,
-                practical software solutions, and user-focused digital products.
+              <p className="mt-5 text-base sm:text-lg font-semibold text-slate-800">
+                Full Stack Developer
+                <span className="mx-3 text-slate-400">&bull;</span>
+                Kashmir, India
               </p>
 
-              <p className="mt-4 max-w-3xl text-base sm:text-lg leading-8 text-slate-500">
-                I enjoy working with Java, React, Node.js, SQL, and modern frontend
-                tools while continuously improving my problem-solving and development
-                skills through hands-on projects.
-              </p>
-
-              <p className="mt-5 max-w-3xl rounded-2xl border border-indigo-200 bg-indigo-50 px-5 py-4 text-base sm:text-lg font-medium leading-8 text-indigo-900 shadow-sm">
-                I am open to contributing to real-world projects where I can apply
-                my knowledge, collaborate effectively, and continue growing as a
-                developer through practical experience.
+              <p className="mt-5 max-w-2xl text-lg sm:text-xl leading-8 text-slate-600">
+                I build clean, responsive web applications with modern frontend
+                interfaces and reliable backend systems.
               </p>
 
               <div className="mt-8 flex flex-wrap gap-3 justify-center lg:justify-start">
