@@ -14,6 +14,23 @@ function Projects() {
   const [selectedProject, setSelectedProject] = useState(null);
 
   const projects = [
+
+         {
+      title: "AI Prep. Hub",
+      shortDescription:
+        "An AI interview prep dashboard with analytics, mock practice, and progress tracking.",
+      description:
+        "This project is a modern AI-powered interview preparation dashboard built with React and Tailwind CSS, redesigned as a premium AI Command Center while preserving all existing logic, API calls, and functionality. Users can experience an interactive and responsive dashboard with smart analytics, performance tracking, practice and mock interview actions, AI-style insight panels, readiness progress indicators, streak-based gamification, and activity timelines that make preparation feel more structured, engaging, and personalized.",
+      technologies: ["React", "Node.js", "Express.js", "Tailwind CSS", "JavaScript", "REST API"],
+      details: [
+        "Built a dashboard for structured interview preparation and progress visibility.",
+        "Included analytics, readiness tracking, and mock practice actions.",
+        "Focused on making preparation feel more interactive, engaging, and organized.",
+      ],
+      icon: <FaRobot className="text-5xl text-green-400" />,
+      githubUrl: "https://github.com/toufeeqmir/VivaCoach-AI",
+      liveLink: "https://viva-coach-ai.vercel.app"
+    },
     {
       title: "Bill-Bond",
       shortDescription:
@@ -75,21 +92,7 @@ function Projects() {
       icon: <FaUsers className="text-5xl text-green-400" />,
       githubUrl: "https://github.com/toufeeqmir/dev-circle",
     },
-    {
-      title: "AI Prep. Hub",
-      shortDescription:
-        "An AI interview prep dashboard with analytics, mock practice, and progress tracking.",
-      description:
-        "This project is a modern AI-powered interview preparation dashboard built with React and Tailwind CSS, redesigned as a premium AI Command Center while preserving all existing logic, API calls, and functionality. Users can experience an interactive and responsive dashboard with smart analytics, performance tracking, practice and mock interview actions, AI-style insight panels, readiness progress indicators, streak-based gamification, and activity timelines that make preparation feel more structured, engaging, and personalized.",
-      technologies: ["React", "Node.js", "Express.js", "Tailwind CSS", "JavaScript", "REST API"],
-      details: [
-        "Built a dashboard for structured interview preparation and progress visibility.",
-        "Included analytics, readiness tracking, and mock practice actions.",
-        "Focused on making preparation feel more interactive, engaging, and organized.",
-      ],
-      icon: <FaRobot className="text-5xl text-green-400" />,
-      githubUrl: "https://github.com/toufeeqmir/VivaCoach-AI",
-    },
+
   ];
 
   return (
