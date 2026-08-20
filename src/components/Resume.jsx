@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-const RESUME_PATH = "/updateResume-Toufeeq.pdf";
+const RESUME_PATH = "/updatedResume-Toufeeq.pdf";
 
 function Resume() {
   const [isAvailable, setIsAvailable] = useState(null);
@@ -143,7 +143,7 @@ function Resume() {
                 Make sure your PDF is placed inside{" "}
                 <span className="font-semibold">public/</span> folder with name{" "}
                 <span className="font-semibold">
-                  Resume-Toufeeqmir.pdf
+                   updatedResume-Toufeeq.pdf
                 </span>
               </p>
             </div>
