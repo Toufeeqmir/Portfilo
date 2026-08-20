@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-const RESUME_PATH = "/Toufeeq_Ahmad_Mir_ATS_Resume.pdf";
+const RESUME_PATH = "/updateResume-Toufeeq.pdf";
 
 function Resume() {
   const [isAvailable, setIsAvailable] = useState(null);
