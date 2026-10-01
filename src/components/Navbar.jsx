@@ -13,15 +13,15 @@ function Navbar() {
   ];
 
   return (
-    <nav className="fixed w-full top-0 left-0 z-50 backdrop-blur-md bg-slate-950/55 shadow-sm border-b border-white/10">
+    <nav className="fixed w-full top-0 left-0 z-50 backdrop-blur-md bg-[#0a192f]/85 shadow-sm border-b border-[#233554]">
       <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
         <div className="flex items-center space-x-4">
-          <div className="w-11 h-11 flex items-center justify-center bg-white/10 rounded-full ring-1 ring-white/15 transition">
-            <span className="text-sm md:text-base font-bold tracking-widest bg-clip-text text-transparent bg-gradient-to-r from-indigo-300 to-violet-300">
+          <div className="w-11 h-11 flex items-center justify-center bg-[#112240] rounded-full ring-1 ring-[#64ffda]/30 transition">
+            <span className="text-sm md:text-base font-bold tracking-widest text-[#64ffda]">
               S/W
             </span>
           </div>
-          <h1 className="text-2xl md:text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-indigo-200 to-violet-200">
+          <h1 className="text-2xl md:text-3xl font-bold text-[#e6f1ff]">
             My Portfolio
           </h1>
         </div>
@@ -31,7 +31,7 @@ function Navbar() {
             <li key={link.href}>
               <a
                 href={link.href}
-                className="text-white/90 font-semibold text-lg hover:text-indigo-200 transition-colors duration-200"
+                className="text-[#ccd6f6] font-semibold text-lg hover:text-[#64ffda] transition-colors duration-200"
               >
                 {link.label}
               </a>
@@ -41,7 +41,7 @@ function Navbar() {
 
         <button
           type="button"
-          className="md:hidden inline-flex items-center justify-center w-11 h-11 rounded-lg bg-white/10 hover:bg-white/15 text-white transition"
+          className="md:hidden inline-flex items-center justify-center w-11 h-11 rounded-lg bg-[#112240] hover:bg-[#233554] text-[#e6f1ff] transition"
           aria-label={open ? "Close menu" : "Open menu"}
           aria-expanded={open}
           onClick={() => setOpen((v) => !v)}
@@ -51,14 +51,14 @@ function Navbar() {
       </div>
 
       {open && (
-        <div className="md:hidden bg-slate-950/85 border-t border-white/10">
+        <div className="md:hidden bg-[#0a192f]/95 border-t border-[#233554]">
           <ul className="px-6 pb-4 pt-3 space-y-3">
             {navLinks.map((link) => (
               <li key={link.href}>
                 <a
                   href={link.href}
                   onClick={() => setOpen(false)}
-                  className="block text-white/90 font-semibold text-lg hover:text-indigo-200 transition-colors"
+                  className="block text-[#ccd6f6] font-semibold text-lg hover:text-[#64ffda] transition-colors"
                 >
                   {link.label}
                 </a>
