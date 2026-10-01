@@ -1,90 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 
-const RESUME_PATH = "/updatedResume-Toufeeq.pdf";
+const RESUME_PATH = "/Toufeeq_Mir_Resume%20(3).pdf";
 
 function Resume() {
-  const [isAvailable, setIsAvailable] = useState(null);
   const [showViewer, setShowViewer] = useState(false);
-  const [isChecking, setIsChecking] = useState(false);
-
-  useEffect(() => {
-    let cancelled = false;
-
-    const validatePdf = async () => {
-      try {
-        const res = await fetch(RESUME_PATH, {
-          method: "GET",
-          cache: "no-store",
-          headers: {
-            Range: "bytes=0-4",
-            Accept: "application/pdf,*/*",
-          },
-        });
-
-        if (!res.ok) return false;
-
-        const buf = await res.arrayBuffer();
-        const bytes = new Uint8Array(buf);
-
-        return (
-          bytes.length >= 4 &&
-          bytes[0] === 0x25 &&
-          bytes[1] === 0x50 &&
-          bytes[2] === 0x44 &&
-          bytes[3] === 0x46
-        );
-      } catch {
-        return false;
-      }
-    };
-
-    validatePdf().then((ok) => {
-      if (!cancelled) setIsAvailable(ok);
-    });
-
-    return () => {
-      cancelled = true;
-    };
-  }, []);
-
-  const handleView = async () => {
-    setIsChecking(true);
-
-    try {
-      const res = await fetch(RESUME_PATH, {
-        method: "GET",
-        cache: "no-store",
-        headers: {
-          Range: "bytes=0-4",
-          Accept: "application/pdf,*/*",
-        },
-      });
-
-      if (!res.ok) {
-        setIsAvailable(false);
-        setShowViewer(false);
-        return;
-      }
-
-      const buf = await res.arrayBuffer();
-      const bytes = new Uint8Array(buf);
-
-      const ok =
-        bytes.length >= 4 &&
-        bytes[0] === 0x25 &&
-        bytes[1] === 0x50 &&
-        bytes[2] === 0x44 &&
-        bytes[3] === 0x46;
-
-      setIsAvailable(ok);
-      setShowViewer(ok);
-    } catch {
-      setIsAvailable(false);
-      setShowViewer(false);
-    } finally {
-      setIsChecking(false);
-    }
-  };
+  const handleView = () => setShowViewer(true);
 
   return (
     <section
@@ -106,10 +26,9 @@ function Resume() {
             <button
               type="button"
               onClick={handleView}
-              disabled={isChecking}
-              className="inline-flex items-center justify-center px-5 py-2.5 rounded-xl border border-indigo-200 bg-indigo-600 text-white font-semibold hover:bg-indigo-700 transition disabled:opacity-50 disabled:cursor-not-allowed"
+              className="inline-flex items-center justify-center px-5 py-2.5 rounded-xl border border-indigo-200 bg-indigo-600 text-white font-semibold hover:bg-indigo-700 transition"
             >
-              {isChecking ? "Checking..." : "View Resume"}
+              View Resume
             </button>
 
             <a
@@ -130,26 +49,7 @@ function Resume() {
         </div>
 
         <div className="rounded-3xl border border-white/10 bg-white/5 backdrop-blur p-6 md:p-8">
-          {isAvailable === null && (
-            <div className="text-slate-200">Loading resume...</div>
-          )}
-
-          {isAvailable === false && (
-            <div>
-              <p className="text-indigo-700 font-semibold mb-2">
-                Resume not found
-              </p>
-              <p className="text-slate-200">
-                Make sure your PDF is placed inside{" "}
-                <span className="font-semibold">public/</span> folder with name{" "}
-                <span className="font-semibold">
-                   updatedResume-Toufeeq.pdf
-                </span>
-              </p>
-            </div>
-          )}
-
-          {isAvailable === true && !showViewer && (
+          {!showViewer && (
             <div className="text-center">
               <p className="text-slate-200">
                 Click <span className="font-semibold">View Resume</span> to open the PDF.
@@ -157,7 +57,7 @@ function Resume() {
             </div>
           )}
 
-          {isAvailable === true && showViewer && (
+          {showViewer && (
             <div className="overflow-hidden rounded-2xl border border-white/10 bg-black/20">
               <div className="flex items-center justify-between px-4 py-3 border-b border-white/10">
                 <p className="text-sm text-white/90 font-semibold">
