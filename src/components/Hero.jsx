@@ -77,10 +77,10 @@ function Hero() {
                   <p className="mt-1 text-xl font-bold text-[#e6f1ff]">Java and web development</p>
                 </div>
                 <div className="rounded-2xl border border-white/10 bg-white/5 p-4">
-                  <p className="text-sm text-[#8892b0]">Current Goal</p>
+                  <p className="text-sm text-[#8892b0]">Availability</p>
                   <p className="mt-1 text-base leading-7 text-[#ccd6f6]">
-                    Building real projects that improve coding depth, design quality,
-                    and backend understanding.
+                    Open to internships, entry-level roles, and opportunities to
+                    contribute to meaningful software projects.
                   </p>
                 </div>
               </div>

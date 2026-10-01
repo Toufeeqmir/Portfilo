@@ -46,21 +46,21 @@ function Projects() {
       icon: <FaReceipt className="text-5xl text-blue-500" />,
       githubUrl: "https://github.com/toufeeqmir/smart-split-ai",
     },
-    {
-      title: "Airbnb Clone",
-      shortDescription:
-        "A booking platform with property listings, authentication, and stay management.",
-      description:
-        "A feature-rich Airbnb clone with login, registration, property listings, and booking functionality.",
-      technologies: ["Node.js", "Express.js", "MySQL", "HTML", "CSS", "JavaScript"],
-      details: [
-        "Implemented authentication flows for account access and protected actions.",
-        "Built listing and booking features to simulate a real rental platform experience.",
-        "Structured the app around property browsing, stay details, and reservation handling.",
-      ],
-      icon: <FaHotel className="text-5xl text-pink-500" />,
-      githubUrl: "https://github.com/toufeeqmir/airbnb-clone",
-    },
+    // {
+    //   title: "Airbnb Clone",
+    //   shortDescription:
+    //     "A booking platform with property listings, authentication, and stay management.",
+    //   description:
+    //     "A feature-rich Airbnb clone with login, registration, property listings, and booking functionality.",
+    //   technologies: ["Node.js", "Express.js", "MySQL", "HTML", "CSS", "JavaScript"],
+    //   details: [
+    //     "Implemented authentication flows for account access and protected actions.",
+    //     "Built listing and booking features to simulate a real rental platform experience.",
+    //     "Structured the app around property browsing, stay details, and reservation handling.",
+    //   ],
+    //   icon: <FaHotel className="text-5xl text-pink-500" />,
+    //   githubUrl: "https://github.com/toufeeqmir/airbnb-clone",
+    // },
     {
       title: "Smart-ai-note-app",
       shortDescription:
@@ -77,21 +77,21 @@ function Projects() {
       liveLink: "https://toufeeq-ai-note-app.vercel.app",
       githubUrl: "https://github.com/toufeeqmir/ai-note-app",
     },
-    {
-      title: "Dev-Circle",
-      shortDescription:
-        "A developer community platform for sharing ideas and collaborating on projects.",
-      description:
-        "A community platform for developers to share knowledge, collaborate on projects, and connect with like-minded individuals.",
-      technologies: ["React", "Node.js", "Express.js", "JavaScript", "HTML", "CSS", "REST API"],
-      details: [
-        "Created a space where developers can share knowledge and interact around projects.",
-        "Focused on community-driven collaboration and idea exchange.",
-        "Designed the experience to feel approachable for discussion and contribution.",
-      ],
-      icon: <FaUsers className="text-5xl text-green-400" />,
-      githubUrl: "https://github.com/toufeeqmir/dev-circle",
-    },
+    // {
+    //   title: "Dev-Circle",
+    //   shortDescription:
+    //     "A developer community platform for sharing ideas and collaborating on projects.",
+    //   description:
+    //     "A community platform for developers to share knowledge, collaborate on projects, and connect with like-minded individuals.",
+    //   technologies: ["React", "Node.js", "Express.js", "JavaScript", "HTML", "CSS", "REST API"],
+    //   details: [
+    //     "Created a space where developers can share knowledge and interact around projects.",
+    //     "Focused on community-driven collaboration and idea exchange.",
+    //     "Designed the experience to feel approachable for discussion and contribution.",
+    //   ],
+    //   icon: <FaUsers className="text-5xl text-green-400" />,
+    //   githubUrl: "https://github.com/toufeeqmir/dev-circle",
+    // },
 
   ];
 
